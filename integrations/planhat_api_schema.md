@@ -1,4 +1,4 @@
-# Planhat API Schema — CX Intelligence Integration Reference
+# Planhat API Schema - CX Intelligence Integration Reference
 
 **Purpose:** Field-level mapping between Planhat's REST API objects and the four-dimension
 health model used in this project. Use this as the canonical reference when configuring
@@ -23,18 +23,18 @@ The customer master record in Planhat. Maps to our `customers` table.
 | `name` | string | `company_name` | |
 | `phase` | string | `lifecycle_stage` | Planhat lifecycle: `onboarding`, `adoption`, `expansion`, `renewal`, `churned` |
 | `mr` | float | `mrr` | Monthly recurring revenue in account currency |
-| `mrr` | float | `mrr` | Alias — use `mr` as source of truth in API responses |
+| `mrr` | float | `mrr` | Alias - use `mr` as source of truth in API responses |
 | `arr` | float | `arr` | Annual recurring revenue |
 | `renewalDate` | date | `renewal_date` | ISO 8601. Pull from Salesforce Contract if Planhat is not master |
 | `contractSignedDate` | date | `contract_start_date` | |
-| `custom.vehicle_count` | int | `vehicle_count` | Custom field — must be created in Planhat UI first |
+| `custom.vehicle_count` | int | `vehicle_count` | Custom field - must be created in Planhat UI first |
 | `custom.legacy_system` | string | `legacy_system` | Values: `Vimcar`, `Avrios`, `Optimum Automotive`, `New Logo` |
 | `custom.country` | string | `country` | ISO 3166-1 alpha-2: `DE`, `AT`, `CH` |
 | `custom.segment` | string | `segment` | Values: `SMB`, `Mid-Market`, `Enterprise` |
-| `nrr` | float | — | Planhat-calculated NRR — validate against our BigQuery calculation |
-| `health` | int | `health_score` | Planhat composite score 0–100. We override with our custom model. |
+| `nrr` | float | - | Planhat-calculated NRR - validate against our BigQuery calculation |
+| `health` | int | `health_score` | Planhat composite score 0-100. We override with our custom model. |
 | `csmId` | string | `csm_owner_id` | References Planhat User object |
-| `tags` | array | — | Use for cohort segmentation (e.g. `["post-merger", "migration-q1-2024"]`) |
+| `tags` | array | - | Use for cohort segmentation (e.g. `["post-merger", "migration-q1-2024"]`) |
 
 **Pagination example:**
 ```
@@ -45,7 +45,7 @@ GET /companies?limit=100&offset=0&select=_id,externalId,name,phase,mr,arr,renewa
 
 ### 2. Metrics (`/metrics`, `/datapoints`)
 
-Time-series signals. This is where product usage lands — GPS adoption, logbook completion,
+Time-series signals. This is where product usage lands - GPS adoption, logbook completion,
 login frequency. Each metric is defined once in Planhat and populated via API push or 
 native integration.
 
@@ -102,13 +102,13 @@ CSM activity log. Used to validate QBR completion signal.
 
 | Planhat Field | Type | Our Field | Notes |
 |---|---|---|---|
-| `_id` | string | — | |
-| `companyId` | string | — | |
-| `type` | string | — | Filter on `"type": "meeting"` for QBRs |
-| `mainType` | string | — | Use `"QBR"` as the standard value |
-| `status` | string | — | `"done"` = completed |
-| `dueDate` | date | — | |
-| `completedAt` | date | — | Null if not completed |
+| `_id` | string | - | |
+| `companyId` | string | - | |
+| `type` | string | - | Filter on `"type": "meeting"` for QBRs |
+| `mainType` | string | - | Use `"QBR"` as the standard value |
+| `status` | string | - | `"done"` = completed |
+| `dueDate` | date | - | |
+| `completedAt` | date | - | Null if not completed |
 
 **QBR completion logic:**
 ```python
@@ -128,14 +128,14 @@ ARR/MRR line items at the product level. Needed for expansion MRR tracking.
 
 | Planhat Field | Type | Our Field | Notes |
 |---|---|---|---|
-| `_id` | string | — | |
-| `companyId` | string | — | |
+| `_id` | string | - | |
+| `companyId` | string | - | |
 | `product` | string | `product_name` | e.g. `"GPS Tracking"`, `"Digital Logbook"` |
 | `value` | float | `mrr` | Monthly value of this licence |
 | `fromDate` | date | `licence_start` | |
 | `toDate` | date | `licence_end` | |
 | `renewalDate` | date | `renewal_date` | Can differ per product line |
-| `status` | string | — | `"active"`, `"churned"` |
+| `status` | string | - | `"active"`, `"churned"` |
 
 **Expansion MRR detection:**
 Compare current period `SUM(value)` per company to prior period.
