@@ -10,7 +10,7 @@ This script handles three Planhat objects per run:
     3. NPS responses      → raw_planhat.nps_responses
 
 Design decisions:
-    - Companies: full refresh nightly (low volume, schema can drift)
+    - Companies: refresh (low volume, schema can drift)
     - Datapoints: incremental by date (high volume, append-only)
     - NPS: incremental by created date (sparse, append-only)
 
@@ -36,7 +36,7 @@ from typing import Generator
 import requests
 from dotenv import load_dotenv
 
-# ── NOTE: BigQuery import is conditional - pipeline logic runs without it
+# NOTE: BigQuery import is conditional - pipeline logic runs without it
 # In a real environment: from google.cloud import bigquery
 
 try:
