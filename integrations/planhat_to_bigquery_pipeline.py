@@ -36,9 +36,8 @@ from typing import Generator
 import requests
 from dotenv import load_dotenv
 
-# ── NOTE: BigQuery import is conditional — pipeline logic runs without it ──────
+# ── NOTE: BigQuery import is conditional - pipeline logic runs without it
 # In a real environment: from google.cloud import bigquery
-# Kept conditional here so the script is readable/runnable without GCP credentials
 
 try:
     from google.cloud import bigquery
@@ -54,7 +53,7 @@ logging.basicConfig(
 )
 log = logging.getLogger(__name__)
 
-# ── Config ─────────────────────────────────────────────────────────────────────
+# Config
 
 PLANHAT_API_TOKEN = os.getenv("PLANHAT_API_TOKEN")
 PLANHAT_BASE_URL  = "https://api.planhat.com"
@@ -70,7 +69,7 @@ PAGE_SIZE     = 100
 RATE_LIMIT_DELAY = 0.35  # seconds between requests (~170 req/min, under 200 limit)
 
 
-# ── Planhat API client ─────────────────────────────────────────────────────────
+# Planhat API client
 
 class PlanhatClient:
     """
@@ -92,7 +91,7 @@ class PlanhatClient:
         self.base_url = PLANHAT_BASE_URL
 
     def _get(self, endpoint: str, params: dict = None) -> list:
-        """Single paginated GET — raises on non-200 responses."""
+        """Single paginated GET - raises on non-200 responses."""
         url = f"{self.base_url}{endpoint}"
         response = self.session.get(url, params=params, timeout=30)
 
@@ -129,7 +128,7 @@ class PlanhatClient:
             # Respect rate limit
             time.sleep(RATE_LIMIT_DELAY)
 
-    # ── Object-specific extractors ─────────────────────────────────────────────
+    # Object-specific extractors
 
     def get_companies(self) -> list[dict]:
         """
@@ -188,12 +187,12 @@ class PlanhatClient:
         return responses
 
 
-# ── Schema transformers ────────────────────────────────────────────────────────
+# Schema transformers
 
 def transform_company(record: dict) -> dict:
     """
     Normalise a raw Planhat Company record to our BigQuery schema.
-    Handles missing custom fields gracefully — Planhat returns nothing
+    Handles missing custom fields, Planhat returns nothing
     for unset custom fields, not null.
     """
     custom = record.get("custom", {})
@@ -246,12 +245,12 @@ def transform_nps(record: dict) -> dict:
     }
 
 
-# ── BigQuery writer ────────────────────────────────────────────────────────────
+# BigQuery
 
 class BigQueryWriter:
     """
     Writes transformed records to BigQuery.
-    Uses WRITE_TRUNCATE for full refresh tables, WRITE_APPEND for incremental.
+    Uses WRITE_TRUNCATE for refresh tables, WRITE_APPEND for incremental.
     """
 
     def __init__(self, project: str, dataset: str):
@@ -276,7 +275,7 @@ class BigQueryWriter:
             return
 
         if not self.client:
-            # Simulation mode — log what would be written
+            # Simulation mode
             log.info(f"  [SIMULATION] Would write {len(records)} rows to {table_id} ({mode})")
             log.info(f"  Sample record: {records[0]}")
             return
@@ -295,13 +294,13 @@ class BigQueryWriter:
         log.info(f"  ✓ Wrote {len(records)} rows to {table_id}")
 
 
-# ── Pipeline orchestrator ──────────────────────────────────────────────────────
+# Pipeline orchestrator
 
 def run_pipeline(mode: str = "incremental", lookback_days: int = 7):
     """
     Main pipeline entry point.
 
-    mode="full"        → Full refresh all tables. Use for initial load or schema changes.
+    mode="full"        → Refresh all tables. Use for initial load or schema changes.
     mode="incremental" → Append new records only, based on lookback_days.
     """
     log.info(f"Starting Planhat → BigQuery pipeline (mode={mode}, lookback={lookback_days}d)")
@@ -313,17 +312,17 @@ def run_pipeline(mode: str = "incremental", lookback_days: int = 7):
     from_date = (today - timedelta(days=lookback_days)).isoformat()
     to_date   = today.isoformat()
 
-    # ── 1. Companies (always full refresh — low volume, schema drift risk) ──────
+    # Companies 
     raw_companies = client.get_companies()
     transformed   = [transform_company(r) for r in raw_companies]
     writer.write(transformed, "companies", mode="WRITE_TRUNCATE")
 
-    # ── 2. Datapoints (incremental — high volume) ──────────────────────────────
+    # Datapoints
     raw_datapoints = client.get_datapoints(from_date=from_date, to_date=to_date)
     transformed    = [transform_datapoint(r) for r in raw_datapoints]
     writer.write(transformed, "datapoints", mode="WRITE_APPEND")
 
-    # ── 3. NPS responses (incremental) ────────────────────────────────────────
+    # NPS responses
     raw_nps     = client.get_nps_responses(from_date=from_date)
     transformed = [transform_nps(r) for r in raw_nps]
     writer.write(transformed, "nps_responses", mode="WRITE_APPEND")
@@ -331,7 +330,7 @@ def run_pipeline(mode: str = "incremental", lookback_days: int = 7):
     log.info("Pipeline complete.")
 
 
-# ── CLI ────────────────────────────────────────────────────────────────────────
+# CLI
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Planhat → BigQuery pipeline")
