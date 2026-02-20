@@ -146,16 +146,8 @@ Planhat integration points
 fleet_saas_cx_intelligence/
 │
 ├── data/
-│   ├── generate_data.py              ← synthetic DACH fleet SaaS dataset
-│   ├── customers.csv                 ← 250 customer master records
-│   ├── customer_health_signals.csv   ← usage, support, engagement signals
-│   ├── monthly_mrr.csv               ← 12-month MRR history per customer
-│   ├── customer_health_scores.csv    ← scored output (all dimensions)
-│   ├── nrr_grr_summary.csv           ← monthly NRR/GRR waterfall
-│   ├── renewal_pipeline.csv          ← 9-month forward renewal view
-│   ├── cs_intervention_list.csv      ← prioritised CS action list
-│   ├── segment_health_summary.csv    ← exec-level segment roll-up
-│   └── country_health_summary.csv    ← DACH country breakdown
+│   ├── generate_data.py              ← run this first to generate all CSVs
+│   └── [CSVs generated at runtime — not committed to repo]
 │
 ├── models/
 │   └── health_scoring.py             ← four-dimension health score model
