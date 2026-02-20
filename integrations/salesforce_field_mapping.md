@@ -15,16 +15,16 @@ Salesforce reads health tier and churn risk flag from Planhat via webhook → Fl
 
 | Field Category | System of Record | Sync Direction | Frequency |
 |---|---|---|---|
-| Contract ARR / MRR | Salesforce | SFDC → BigQuery → Planhat | Nightly |
-| Renewal date | Salesforce | SFDC → BigQuery → Planhat | Nightly |
-| CSM / AE owner | Salesforce | SFDC → Planhat | Nightly |
+| Contract ARR / MRR | Salesforce | SFDC → BigQuery → Planhat | Overnight |
+| Renewal date | Salesforce | SFDC → BigQuery → Planhat | Overnight |
+| CSM / AE owner | Salesforce | SFDC → Planhat | Overnight |
 | Customer health score | Planhat | Planhat → SFDC (read-only field) | Real-time webhook |
 | Health tier (Red/Amber/Green) | Planhat | Planhat → SFDC | Real-time webhook |
 | Churn risk flag | BigQuery / Planhat | Planhat → SFDC | Real-time webhook |
 | Product usage signals | Product DB | Product DB → BigQuery → Planhat | Daily |
-| NPS score | Planhat | Planhat → BigQuery | Nightly |
+| NPS score | Planhat | Planhat → BigQuery | Overnight |
 | Support tickets / CSAT | Zendesk | Zendesk → BigQuery | Hourly |
-| Company master (name, country) | Salesforce | SFDC → Planhat (via `externalId`) | Nightly |
+| Company master (name, country) | Salesforce | SFDC → Planhat (via `externalId`) | Overnight |
 
 **Design principle:** Salesforce is master for commercial data. Planhat is master for
 health and lifecycle data. BigQuery is the analytical join layer.
@@ -122,12 +122,12 @@ are the primary source. Use SFDC Tasks for audit trail and manager visibility.
 
 ## Integration Sync Logic
 
-### Nightly SFDC → BigQuery Extract
+### Overnight SFDC → BigQuery Extract
 
 Recommended: Salesforce Change Data Capture (CDC) events streamed to BigQuery via
 Pub/Sub, or scheduled SOQL export using the Bulk API 2.0.
 
-**Objects to extract nightly:**
+**Objects to extract Overnight:**
 - `Account` (full refresh — small volume)
 - `Opportunity` (incremental by `LastModifiedDate`)
 - `Contract` (incremental by `LastModifiedDate`)
@@ -155,7 +155,7 @@ When the same field exists in both SFDC and Planhat:
 
 | Field | Winner | Resolution |
 |---|---|---|
-| `renewal_date` | Salesforce | Planhat syncs from SFDC nightly; never write renewal date from Planhat |
+| `renewal_date` | Salesforce | Planhat syncs from SFDC overnight; never write renewal date from Planhat |
 | `mrr` | Salesforce | Planhat `mr` field populated from SFDC Contract ACV / 12 |
 | `csm_owner` | Salesforce | Planhat User synced from SFDC User lookup |
 | `health_score` | Planhat | SFDC field is read-only; written by webhook only |
