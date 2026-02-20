@@ -52,7 +52,7 @@ bi-directional linking.
 | Health Score | `Planhat_Health_Score__c` | number | - | Read-only, written by Planhat webhook |
 | Health Tier | `Planhat_Health_Tier__c` | picklist | - | `Green`, `Amber`, `Red` - written by Planhat |
 | Churn Risk Flag | `Churn_Risk_Flag__c` | checkbox | - | Written by Planhat or our BigQuery model |
-| Legacy System | `Legacy_System__c` | picklist | `legacy_system` | `Vimcar`, `Avrios`, `Optimum Automotive`, `New Logo` |
+| Legacy System | `Legacy_System__c` | picklist | `legacy_system` | `Auto1`, `Auto2`, `Auto3`, `New Logo` |
 
 ---
 
