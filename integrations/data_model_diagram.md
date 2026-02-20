@@ -1,7 +1,7 @@
-# CX Intelligence Stack — Data Architecture
+# CX Intelligence Stack - Data Architecture
 
 **Version:** 1.0  
-**Scope:** Fleet SaaS DACH — Post-merger customer portfolio  
+**Scope:** Fleet SaaS DACH - Post-merger customer portfolio  
 **Systems:** Planhat · Salesforce · Zendesk · Product DB · BigQuery · dbt · Looker Studio
 
 ---
@@ -139,19 +139,18 @@ raw sources
 ---
 
 ## Key Design Decisions
-
 **Why BigQuery as the join layer, not Planhat?**
-Planhat's analytics are customer-centric by design — they don't support arbitrary SQL
+Planhat's analytics are customer-centric by design they don't support arbitrary SQL
 joins across objects. NRR/GRR calculation from the MRR waterfall requires a pivot on
 12 months of data per customer, which is a BigQuery operation, not a Planhat report.
 
 **Why dbt for transformation, not raw SQL?**
 Version-controlled models, test coverage (schema tests + custom tests), and lineage
-documentation. The mart layer models map 1:1 to the Python logic in this repo —
+documentation. The mart layer models map 1:1 to the Python logic in this repo,
 the Python files are the prototype, dbt models are the production equivalent.
 
 **Why not write health scores directly from BigQuery to Planhat?**
-We do — nightly. But Planhat is the operational surface where CSMs work. The
+We do, but Planhat is the operational surface where CSMs work. The
 Planhat health score is the version CSMs see in their daily workflow. BigQuery
 is the analytical version for reporting and model iteration. They should agree;
 if they diverge, BigQuery is the source of truth for the discrepancy investigation.
