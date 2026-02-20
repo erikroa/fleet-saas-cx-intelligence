@@ -128,7 +128,7 @@ Recommended: Salesforce Change Data Capture (CDC) events streamed to BigQuery vi
 Pub/Sub, or scheduled SOQL export using the Bulk API 2.0.
 
 **Objects to extract Overnight:**
-- `Account` (full refresh — small volume)
+- `Account` (refresh - small volume)
 - `Opportunity` (incremental by `LastModifiedDate`)
 - `Contract` (incremental by `LastModifiedDate`)
 
