@@ -1,8 +1,8 @@
-# Salesforce Field Mapping — CX Intelligence Integration Reference
+# Salesforce Field Mapping - CX Intelligence Integration Reference
 
 **Purpose:** Defines which Salesforce objects feed the CX intelligence stack, which system
 owns each field, and how SFDC data joins to Planhat and BigQuery. This is the
-system-of-record design document — the reference for resolving conflicts when the
+system-of-record design document, the reference for resolving conflicts when the
 same field exists in multiple systems.
 
 **Integration pattern:** Salesforce → BigQuery (via scheduled extract or Change Data Capture)
@@ -27,8 +27,7 @@ Salesforce reads health tier and churn risk flag from Planhat via webhook → Fl
 | Company master (name, country) | Salesforce | SFDC → Planhat (via `externalId`) | Nightly |
 
 **Design principle:** Salesforce is master for commercial data. Planhat is master for
-health and lifecycle data. BigQuery is the analytical join layer — it never writes
-back to either system.
+health and lifecycle data. BigQuery is the analytical join layer.
 
 ---
 
@@ -43,16 +42,16 @@ bi-directional linking.
 |---|---|---|---|---|
 | Account ID | `Id` | ID | `planhat_external_id`, `customer_id` | Primary join key across all systems |
 | Account Name | `Name` | string | `company_name` | |
-| Account Owner | `OwnerId` | lookup | `ae_owner` | AE — not the same as CSM |
-| CSM Owner | `CSM_Owner__c` | lookup | `csm_owner` | Custom field — lookup to User |
+| Account Owner | `OwnerId` | lookup | `ae_owner` | AE - not the same as CSM |
+| CSM Owner | `CSM_Owner__c` | lookup | `csm_owner` | Custom field - lookup to User |
 | Billing Country | `BillingCountry` | string | `country` | Normalise to ISO 3166-1 alpha-2 |
 | Industry | `Industry` | picklist | `industry` | |
 | Customer Segment | `Customer_Segment__c` | picklist | `segment` | Custom: `SMB`, `Mid-Market`, `Enterprise` |
-| Fleet Size | `Fleet_Size__c` | number | `vehicle_count` | Custom — vehicle count at contract |
+| Fleet Size | `Fleet_Size__c` | number | `vehicle_count` | Custom - vehicle count at contract |
 | Account Type | `Type` | picklist | — | Filter on `Customer` for active accounts |
-| Health Score | `Planhat_Health_Score__c` | number | — | Read-only, written by Planhat webhook |
-| Health Tier | `Planhat_Health_Tier__c` | picklist | — | `Green`, `Amber`, `Red` — written by Planhat |
-| Churn Risk Flag | `Churn_Risk_Flag__c` | checkbox | — | Written by Planhat or our BigQuery model |
+| Health Score | `Planhat_Health_Score__c` | number | - | Read-only, written by Planhat webhook |
+| Health Tier | `Planhat_Health_Tier__c` | picklist | - | `Green`, `Amber`, `Red` - written by Planhat |
+| Churn Risk Flag | `Churn_Risk_Flag__c` | checkbox | - | Written by Planhat or our BigQuery model |
 | Legacy System | `Legacy_System__c` | picklist | `legacy_system` | `Vimcar`, `Avrios`, `Optimum Automotive`, `New Logo` |
 
 ---
@@ -65,15 +64,15 @@ Renewal and expansion tracking. Each renewal is a separate Opportunity record.
 |---|---|---|---|---|
 | Opportunity ID | `Id` | ID | `opportunity_id` | |
 | Account | `AccountId` | lookup | `customer_id` | Join key to Account |
-| Opportunity Name | `Name` | string | — | Convention: `[Account] - Renewal - [Year]` |
+| Opportunity Name | `Name` | string | - | Convention: `[Account] - Renewal - [Year]` |
 | Stage | `StageName` | picklist | `renewal_stage` | Track: `Renewal Identified` → `In Negotiation` → `Closed Won/Lost` |
 | Close Date | `CloseDate` | date | `renewal_date` | This is the canonical renewal date field |
 | Amount | `Amount` | currency | `renewal_arr` | ARR value at renewal |
-| Type | `Type` | picklist | — | Filter on `Existing Business - Renewal` |
+| Type | `Type` | picklist | - | Filter on `Existing Business - Renewal` |
 | Renewal Probability | `Probability` | percent | `renewal_probability` | Override with our model output where available |
-| Forecast Category | `ForecastCategoryName` | string | — | `Commit`, `Best Case`, `Pipeline`, `Omitted` |
+| Forecast Category | `ForecastCategoryName` | string | - | `Commit`, `Best Case`, `Pipeline`, `Omitted` |
 | ARR Change | `ARR_Change__c` | currency | `expansion_arr` | Custom: positive = expansion, negative = contraction |
-| Churn Reason | `Churn_Reason__c` | picklist | — | Custom: populate on Closed Lost |
+| Churn Reason | `Churn_Reason__c` | picklist | - | Custom: populate on Closed Lost |
 
 **Renewal pipeline query (SOQL):**
 ```sql
@@ -108,7 +107,7 @@ initial ARR. More reliable than Opportunity for historical ARR analysis.
 
 ### Task / Activity
 
-CSM activity log in SFDC. Secondary source for QBR tracking — Planhat Tasks
+CSM activity log in SFDC. Secondary source for QBR tracking, Planhat Tasks
 are the primary source. Use SFDC Tasks for audit trail and manager visibility.
 
 | SFDC Field | API Name | Type | Notes |
