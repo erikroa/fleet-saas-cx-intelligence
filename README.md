@@ -2,7 +2,7 @@
 
 > A CX Operations analytics project built to demonstrate operator-level thinking in fleet management SaaS.
 > Designed for a post-merger, PE-backed context with a DACH customer base.
-
+![CX Ops Executive Dashboard](dashboards/cx_ops_executive_dashboard.png)
 ---
 
 ## The Business Question
