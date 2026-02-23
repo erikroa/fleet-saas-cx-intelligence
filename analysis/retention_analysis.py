@@ -1,17 +1,9 @@
 """
-retention_analysis.py
----------------------
-Analyses customer retention risk, models NRR/GRR impact, and produces
-a prioritized CS intervention list for the next 90-day renewal window.
-
-This is the analytical core of the CX Ops workflow — translating health
-scores into revenue-weighted business decisions for CS team leaders.
-
 Outputs:
-    data/nrr_grr_summary.csv         — Monthly NRR/GRR calculated from history
-    data/renewal_pipeline.csv        — Upcoming renewals with risk classification
-    data/cs_intervention_list.csv    — Prioritised CS actions for Q1 2025
-    data/segment_health_summary.csv  — Segment-level health roll-up (exec view)
+    data/nrr_grr_summary.csv         - Monthly NRR/GRR calculated from history
+    data/renewal_pipeline.csv        - Upcoming renewals with risk classification
+    data/cs_intervention_list.csv    - Prioritised CS actions for Q1 2025
+    data/segment_health_summary.csv  - Segment-level health roll-up (exec view)
 """
 
 import pandas as pd
@@ -20,14 +12,14 @@ import os
 
 REFERENCE_DATE = pd.Timestamp("2024-12-31")
 
-# ── Load data ──────────────────────────────────────────────────────────────────
+# Load data 
 
 def load_data():
     scored    = pd.read_csv("data/customer_health_scores.csv", parse_dates=["renewal_date"])
     monthly   = pd.read_csv("data/monthly_mrr.csv", parse_dates=["month"])
     return scored, monthly
 
-# ── NRR / GRR calculation ──────────────────────────────────────────────────────
+# NRR / GRR calculation 
 
 def calculate_nrr_grr(monthly: pd.DataFrame) -> pd.DataFrame:
     """
@@ -91,7 +83,7 @@ def calculate_nrr_grr(monthly: pd.DataFrame) -> pd.DataFrame:
     return pd.DataFrame(records)
 
 
-# ── Renewal pipeline analysis ─────────────────────────────────────────────────
+# Renewal pipeline analysis
 
 def build_renewal_pipeline(scored: pd.DataFrame) -> pd.DataFrame:
     """
@@ -153,11 +145,11 @@ def build_renewal_pipeline(scored: pd.DataFrame) -> pd.DataFrame:
     ]].sort_values(["renewal_risk", "arr_at_risk"], ascending=[True, False])
 
 
-# ── CS intervention priority list ─────────────────────────────────────────────
+# CS intervention priority list 
 
 def build_intervention_list(pipeline: pd.DataFrame) -> pd.DataFrame:
     """
-    Produces a prioritised, actionable list for CS team leaders.
+    Produces an actionable list for CS team leaders.
     Focused on Critical and High risk accounts renewing in 90 days.
     Includes the single most important signal driving each flag.
     """
@@ -191,11 +183,11 @@ def build_intervention_list(pipeline: pd.DataFrame) -> pd.DataFrame:
     ]]
 
 
-# ── Segment health summary (exec roll-up) ─────────────────────────────────────
+# Segment health summary
 
 def build_segment_summary(scored: pd.DataFrame) -> pd.DataFrame:
     """
-    Segment-level health and revenue roll-up for executive dashboard.
+    Segment-level health and revenue for executive dashboard.
     Answers: where is our retention risk concentrated by segment?
     """
     summary = scored.groupby("segment").agg(
@@ -221,8 +213,7 @@ def build_segment_summary(scored: pd.DataFrame) -> pd.DataFrame:
     return summary.sort_values("total_arr", ascending=False)
 
 
-# ── Country health summary ─────────────────────────────────────────────────────
-
+# Country health summary
 def build_country_summary(scored: pd.DataFrame) -> pd.DataFrame:
     """DACH breakdown for regional CS team allocation."""
     summary = scored.groupby("country").agg(
@@ -241,7 +232,7 @@ def build_country_summary(scored: pd.DataFrame) -> pd.DataFrame:
     return summary.sort_values("total_arr", ascending=False)
 
 
-# ── Main ───────────────────────────────────────────────────────────────────────
+# Main 
 
 if __name__ == "__main__":
     os.makedirs("data", exist_ok=True)
