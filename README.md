@@ -49,7 +49,7 @@ Health Score = (Adoption × 35%) + (Engagement × 30%) + (Support × 20%) + (Rel
 - Digital logbook completion rate (compliance for tax/GDPR purposes)
 - Fleet reports generated (value realisation signal)
 
-**Engagement (30%)** - admin login frequency and mobile DAU/MAU. The admin is the internal champion; if they stop logging in, sponsorship is eroding. Mobile DAU/MAU captures driver engagement — fleets with high driver adoption are structurally stickier.
+**Engagement (30%)** - admin login frequency and mobile DAU/MAU. The admin is the internal champion; if they stop logging in, sponsorship is eroding. Mobile DAU/MAU captures driver engagement - fleets with high driver adoption are structurally stickier.
 
 - Days since last admin login
 - Mobile app DAU/MAU ratio
