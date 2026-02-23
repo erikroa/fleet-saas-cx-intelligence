@@ -1,14 +1,5 @@
 """
 generate_data.py
-----------------
-Generates a synthetic but realistic DACH fleet management SaaS customer dataset
-for CX Operations analysis. Designed to reflect the operational reality of a
-post-merger fleet SaaS business (GPS tracking, digital logbooks, fleet analytics)
-serving SMBs and enterprises across Germany, Austria, and Switzerland.
-
-Usage:
-    python data/generate_data.py
-    → Writes data/customers.csv and data/monthly_usage.csv
 """
 
 import pandas as pd
@@ -20,7 +11,7 @@ import os
 random.seed(42)
 np.random.seed(42)
 
-# ── Configuration ─────────────────────────────────────────────────────────────
+# Configuration 
 
 N_CUSTOMERS = 250
 REFERENCE_DATE = datetime(2024, 12, 31)
@@ -46,8 +37,7 @@ PRODUCTS = ["GPS Tracking", "Digital Logbook", "Fleet Analytics", "Driver Scorin
 
 LEGACY_SYSTEMS = ["Vimcar", "Avrios", "Optimum Automotive", "New Logo"]
 
-# ── Helper functions ───────────────────────────────────────────────────────────
-
+# Helper functions 
 def weighted_choice(options: dict):
     keys = list(options.keys())
     weights = list(options.values())
@@ -66,7 +56,7 @@ def contract_start_date(segment: str) -> datetime:
     else:
         return random_date(1825, 90)   # up to 5 years
 
-# ── Customer master data ───────────────────────────────────────────────────────
+# Customer master data
 
 def generate_customers() -> pd.DataFrame:
     records = []
@@ -90,7 +80,7 @@ def generate_customers() -> pd.DataFrame:
         start_date = contract_start_date(seg)
         tenure_months = max(1, (REFERENCE_DATE - start_date).days // 30)
 
-        # Renewal date: next anniversary or mid-cycle
+        # Renewal date
         months_into_year = tenure_months % 12
         months_to_renewal = 12 - months_into_year if months_into_year > 0 else 12
         renewal_date = REFERENCE_DATE + timedelta(days=months_to_renewal * 30)
@@ -112,8 +102,7 @@ def generate_customers() -> pd.DataFrame:
 
         industry = random.choice(INDUSTRIES[country])
 
-        # ── Churn risk signal: bake in latent risk factors ──────────────────────
-        # These will be used to shape usage + health signals realistically
+        # Churn risk signal
         base_churn_risk = 0.10  # baseline 10%
 
         risk_factors = 0
@@ -150,9 +139,7 @@ def generate_customers() -> pd.DataFrame:
 
     return pd.DataFrame(records)
 
-# ── Customer archetypes ────────────────────────────────────────────────────────
-# Explicit behavioural archetypes ensure realistic health distribution.
-# Target distribution: ~45% Green, ~35% Amber, ~20% Red
+# Customer archetypes
 
 ARCHETYPES = {
     # (weight, gps_mean, gps_sd, login_exp_scale, dau_mau_mean, tickets_lambda,
@@ -174,7 +161,7 @@ def generate_health_signals(df: pd.DataFrame) -> pd.DataFrame:
     archetype_names = list(ARCHETYPES.keys())
     target_pcts = [0.20, 0.25, 0.25, 0.20, 0.10]  # champion → critical
 
-    # Assign archetypes by percentile of latent churn prob (ascending)
+    # Assign archetypes by percentile of churn risk (ascending)
     df = df.copy().reset_index(drop=True)
     df["_rank"] = df["_latent_churn_prob"].rank(method="first", ascending=True)
     n = len(df)
@@ -192,7 +179,7 @@ def generate_health_signals(df: pd.DataFrame) -> pd.DataFrame:
         (_, gps_m, gps_sd, login_scale, dau_m,
          tickets_lambda, res_m, csat_m, csat_sd, qbr_p, nps_pool, ob_m) = ARCHETYPES[archetype]
 
-        # ── Adoption signals ────────────────────────────────────────────────
+        # Adoption signals
         gps_adoption_pct = round(np.clip(np.random.normal(gps_m, gps_sd), 5, 100), 1)
 
         if "Digital Logbook" in c["products"]:
@@ -206,7 +193,7 @@ def generate_health_signals(df: pd.DataFrame) -> pd.DataFrame:
         usage_factor = gps_m / 92.0
         reports_generated_30d = max(0, int(np.random.normal(expected_reports * usage_factor, 2)))
 
-        # ── Engagement signals ───────────────────────────────────────────────
+        # Engagement signals
         days_since_login = min(120, max(1, int(np.random.exponential(login_scale))))
         mobile_dau_mau = round(np.clip(np.random.normal(dau_m, 0.10), 0.0, 0.85), 3)
 
@@ -216,12 +203,12 @@ def generate_health_signals(df: pd.DataFrame) -> pd.DataFrame:
             np.random.normal(onboarding_base + tenure_boost, 8), 0, 100
         ), 1)
 
-        # ── Support signals ──────────────────────────────────────────────────
+        # Support signals 
         open_tickets = max(0, int(np.random.poisson(tickets_lambda)))
         avg_resolution_days = round(np.clip(np.random.normal(res_m, res_m * 0.3), 0.5, 45), 1)
         csat_score = round(np.clip(np.random.normal(csat_m, csat_sd), 1.0, 5.0), 1)
 
-        # ── Relationship signals ─────────────────────────────────────────────
+        # Relationship signals
         qbr_done = 1 if (c["segment"] in ("Enterprise", "Mid-Market") and
                          random.random() < qbr_p) else 0
         surveyed = random.random() < 0.65
@@ -229,7 +216,7 @@ def generate_health_signals(df: pd.DataFrame) -> pd.DataFrame:
         if surveyed:
             nps_score = random.choice(nps_pool)
 
-        # ── Expansion signals ────────────────────────────────────────────────
+        # Expansion signals 
         expansion_mrr_3m = 0.0
         if archetype in ("champion", "healthy") and c["tenure_months"] >= 6:
             if random.random() < 0.28:
@@ -256,7 +243,7 @@ def generate_health_signals(df: pd.DataFrame) -> pd.DataFrame:
 
     return pd.DataFrame(rows)
 
-# ── Monthly MRR history (for NRR/GRR calculation) ─────────────────────────────
+# Monthly MRR history (for NRR/GRR calculation)
 
 def generate_monthly_mrr(df: pd.DataFrame) -> pd.DataFrame:
     """
@@ -308,7 +295,7 @@ def generate_monthly_mrr(df: pd.DataFrame) -> pd.DataFrame:
     return pd.DataFrame(records)
 
 
-# ── Main ───────────────────────────────────────────────────────────────────────
+# Main 
 
 if __name__ == "__main__":
     os.makedirs("data", exist_ok=True)
