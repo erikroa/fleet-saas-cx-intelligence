@@ -1,0 +1,4 @@
+country,customers,total_arr,avg_health_score,at_risk_arr,red_count,amber_count,at_risk_pct
+DE,156,2119050.96,72.99,63839.4,11,56,3.0
+AT,53,512329.68,72.53,12475.8,4,17,2.4
+CH,41,423676.2,59.65,32427.84,12,15,7.7

@@ -1,0 +1,39 @@
+priority_rank,customer_id,segment,country,arr,arr_at_risk,health_score,health_tier,renewal_risk,months_to_renewal,legacy_system,primary_risk_signal,recommended_intervention
+1,CUST-0195,SMB,CH,3731.64,2612.15,37.6,Red,Critical,2,Vimcar,No admin login in 61 days,Executive Escalation + Emergency EBR
+2,CUST-0161,SMB,AT,2396.76,1677.73,37.6,Red,Critical,1,New Logo,GPS adoption 50% (below 70% threshold),Executive Escalation + Emergency EBR
+3,CUST-0229,SMB,CH,1253.04,877.13,26.9,Red,Critical,2,New Logo,GPS adoption 22% (below 70% threshold),Executive Escalation + Emergency EBR
+4,CUST-0107,SMB,CH,988.68,692.08,38.4,Red,Critical,3,New Logo,GPS adoption 23% (below 70% threshold),Executive Escalation + Emergency EBR
+5,CUST-0096,SMB,CH,856.68,599.68,19.8,Red,Critical,3,Vimcar,GPS adoption 23% (below 70% threshold),Executive Escalation + Emergency EBR
+6,CUST-0074,SMB,CH,762.6,533.82,24.8,Red,Critical,3,Optimum Automotive,GPS adoption 33% (below 70% threshold),Executive Escalation + Emergency EBR
+7,CUST-0035,SMB,DE,569.76,398.83,28.4,Red,Critical,3,Avrios,GPS adoption 50% (below 70% threshold),Executive Escalation + Emergency EBR
+8,CUST-0141,SMB,CH,475.56,332.89,18.3,Red,Critical,2,New Logo,GPS adoption 28% (below 70% threshold),Executive Escalation + Emergency EBR
+9,CUST-0126,SMB,DE,5636.04,2536.22,62.4,Amber,High,1,New Logo,Multiple signals — see full health breakdown,CSM-led Health Review + Product Training
+10,CUST-0086,SMB,CH,5534.16,2490.37,47.3,Amber,High,2,Optimum Automotive,No admin login in 120 days,CSM-led Health Review + Product Training
+11,CUST-0069,SMB,DE,5499.96,2474.98,54.3,Amber,High,2,New Logo,No admin login in 103 days,CSM-led Health Review + Product Training
+12,CUST-0241,SMB,DE,5272.56,2372.65,41.7,Amber,High,1,Avrios,GPS adoption 51% (below 70% threshold),CSM-led Health Review + Product Training
+13,CUST-0109,SMB,DE,5059.56,2276.8,61.1,Amber,High,1,New Logo,Multiple signals — see full health breakdown,CSM-led Health Review + Product Training
+14,CUST-0146,SMB,DE,4726.92,2127.11,64.0,Amber,High,2,Avrios,No admin login in 82 days,CSM-led Health Review + Product Training
+15,CUST-0235,SMB,CH,4497.0,2023.65,57.8,Amber,High,2,New Logo,GPS adoption 51% (below 70% threshold),CSM-led Health Review + Product Training
+16,CUST-0011,SMB,CH,4381.68,1971.76,49.5,Amber,High,2,New Logo,No admin login in 62 days,CSM-led Health Review + Product Training
+17,CUST-0131,SMB,AT,4295.64,1933.04,66.2,Amber,High,3,Vimcar,Multiple signals — see full health breakdown,CSM-led Health Review + Product Training
+18,CUST-0068,SMB,DE,4169.16,1876.12,60.0,Amber,High,2,New Logo,Multiple signals — see full health breakdown,CSM-led Health Review + Product Training
+19,CUST-0070,SMB,CH,3851.76,1733.29,43.9,Amber,High,1,Vimcar,GPS adoption 35% (below 70% threshold),CSM-led Health Review + Product Training
+20,CUST-0082,SMB,DE,3775.44,1698.95,57.3,Amber,High,3,New Logo,Multiple signals — see full health breakdown,CSM-led Health Review + Product Training
+21,CUST-0091,SMB,AT,3704.76,1667.14,46.9,Amber,High,3,Vimcar,GPS adoption 43% (below 70% threshold),CSM-led Health Review + Product Training
+22,CUST-0186,SMB,DE,3650.64,1642.79,69.6,Amber,High,3,New Logo,Multiple signals — see full health breakdown,CSM-led Health Review + Product Training
+23,CUST-0220,SMB,DE,3608.4,1623.78,55.8,Amber,High,1,New Logo,3 open support tickets,CSM-led Health Review + Product Training
+24,CUST-0231,SMB,DE,3601.68,1620.76,46.9,Amber,High,3,New Logo,CSAT 2.9/5.0,CSM-led Health Review + Product Training
+25,CUST-0248,SMB,DE,3465.6,1559.52,62.0,Amber,High,2,New Logo,Multiple signals — see full health breakdown,CSM-led Health Review + Product Training
+26,CUST-0160,SMB,DE,3355.68,1510.06,62.2,Amber,High,1,Optimum Automotive,3 open support tickets,CSM-led Health Review + Product Training
+27,CUST-0071,SMB,CH,3334.44,1500.5,55.0,Amber,High,2,Optimum Automotive,Multiple signals — see full health breakdown,CSM-led Health Review + Product Training
+28,CUST-0051,SMB,CH,2760.6,1242.27,48.3,Amber,High,2,Avrios,GPS adoption 46% (below 70% threshold),CSM-led Health Review + Product Training
+29,CUST-0147,SMB,DE,2418.72,1088.42,62.0,Amber,High,1,Vimcar,No admin login in 33 days,CSM-led Health Review + Product Training
+30,CUST-0033,SMB,DE,2394.72,1077.62,46.6,Amber,High,3,New Logo,No admin login in 61 days,CSM-led Health Review + Product Training
+31,CUST-0136,SMB,DE,1876.56,844.45,55.0,Amber,High,3,Vimcar,CSAT 2.8/5.0,CSM-led Health Review + Product Training
+32,CUST-0057,SMB,DE,1594.68,717.61,54.0,Amber,High,1,New Logo,No admin login in 80 days,CSM-led Health Review + Product Training
+33,CUST-0013,SMB,DE,1498.32,674.24,64.4,Amber,High,3,New Logo,No admin login in 65 days,CSM-led Health Review + Product Training
+34,CUST-0108,SMB,DE,1220.88,549.4,50.6,Amber,High,2,New Logo,CSAT 2.4/5.0,CSM-led Health Review + Product Training
+35,CUST-0122,SMB,AT,909.84,409.43,43.7,Amber,High,3,New Logo,5 open support tickets,CSM-led Health Review + Product Training
+36,CUST-0076,SMB,AT,693.48,312.07,48.0,Amber,High,1,New Logo,GPS adoption 52% (below 70% threshold),CSM-led Health Review + Product Training
+37,CUST-0140,SMB,AT,475.32,213.89,64.2,Amber,High,2,New Logo,3 open support tickets,CSM-led Health Review + Product Training
+38,CUST-0114,SMB,DE,444.12,199.85,43.8,Amber,High,1,Optimum Automotive,No admin login in 120 days,CSM-led Health Review + Product Training

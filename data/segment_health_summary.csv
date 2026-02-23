@@ -1,0 +1,4 @@
+segment,customers,total_arr,avg_health_score,green_count,amber_count,red_count,at_risk_arr,churn_risk_customers,expansion_pipeline,pct_red_amber,at_risk_pct_of_arr
+Enterprise,42,1911760.92,88.46,40,1,1,0.0,0,133268.88,4.8,0.0
+Mid-Market,67,727531.68,89.83,65,2,0,0.0,0,32285.52,3.0,0.0
+SMB,141,415764.24,56.32,30,85,26,108743.04,38,1292.16,78.7,26.2

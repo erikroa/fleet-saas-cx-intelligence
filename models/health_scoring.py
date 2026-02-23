@@ -19,8 +19,8 @@ Health model architecture (mirrors how Planhat segments scores):
     └──────────────────┴────────┴─────────────────────────────────────────────┘
 
 Output:
-    - health_score: 0–100 composite score
-    - health_tier: Red (0–39) / Amber (40–69) / Green (70–100)
+    - health_score: 0-100 composite score
+    - health_tier: Red (0-39) / Amber (40-69) / Green (70-100)
     - dimension scores for drill-down
     - churn_risk_flag: priority intervention flag for CS team
 
@@ -33,7 +33,7 @@ import pandas as pd
 import numpy as np
 import os
 
-# ── Dimension weights ──────────────────────────────────────────────────────────
+# Dimension weights
 
 WEIGHTS = {
     "adoption":     0.35,
@@ -44,7 +44,7 @@ WEIGHTS = {
 
 assert sum(WEIGHTS.values()) == 1.0, "Weights must sum to 1"
 
-# ── Scoring functions (each returns 0–100) ─────────────────────────────────────
+# Scoring (each returns 0-100) 
 
 def score_adoption(row: pd.Series) -> float:
     """
@@ -166,7 +166,7 @@ def score_relationship(row: pd.Series) -> float:
     return (qbr_score * 0.60) + (nps_score * 0.40)
 
 
-# ── Composite health score ─────────────────────────────────────────────────────
+# Composite health score
 
 def compute_health_scores(customers: pd.DataFrame, signals: pd.DataFrame) -> pd.DataFrame:
     df = customers.merge(signals, on="customer_id", how="left")
@@ -183,7 +183,7 @@ def compute_health_scores(customers: pd.DataFrame, signals: pd.DataFrame) -> pd.
         df["relationship_score"] * WEIGHTS["relationship"]
     ).round(1)
 
-    # ── Health tier classification ─────────────────────────────────────────
+    # Health tier classification
     def tier(score):
         if score >= 70:
             return "Green"
@@ -194,7 +194,7 @@ def compute_health_scores(customers: pd.DataFrame, signals: pd.DataFrame) -> pd.
 
     df["health_tier"] = df["health_score"].apply(tier)
 
-    # ── Churn risk flag: renewal urgency × health ─────────────────────────
+    # Churn risk flag: renewal urgency × health 
     # Priority intervention = Red/Amber health AND renewing in 90 days
     df["renewal_in_90d"] = df["months_to_renewal"] <= 3
     df["churn_risk_flag"] = (
@@ -202,14 +202,14 @@ def compute_health_scores(customers: pd.DataFrame, signals: pd.DataFrame) -> pd.
         (df["renewal_in_90d"])
     )
 
-    # ── At-risk ARR ───────────────────────────────────────────────────────
+    # At-risk ARR
     df["at_risk_arr"] = df.apply(
         lambda r: r["arr"] if r["churn_risk_flag"] else 0.0, axis=1
     )
 
     return df
 
-# ── Output columns ─────────────────────────────────────────────────────────────
+# Output columns
 
 OUTPUT_COLS = [
     "customer_id", "segment", "country", "industry",
@@ -228,7 +228,7 @@ OUTPUT_COLS = [
     "renewal_in_90d", "churn_risk_flag", "at_risk_arr",
 ]
 
-# ── Main ───────────────────────────────────────────────────────────────────────
+# Main
 
 if __name__ == "__main__":
     customers = pd.read_csv("data/customers.csv")

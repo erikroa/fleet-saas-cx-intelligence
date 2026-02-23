@@ -1,0 +1,251 @@
+customer_id,segment,country,industry,vehicle_count,mrr,arr,products,product_count,legacy_system,contract_start_date,tenure_months,renewal_date,months_to_renewal
+CUST-0001,Mid-Market,DE,Gesundheitswesen,60,1124.33,13491.96,GPS Tracking|Digital Logbook|Fleet Analytics,3,Avrios,2022-08-18,28,2025-08-28,8
+CUST-0002,SMB,AT,Außendienst & Vertrieb,2,37.68,452.16,GPS Tracking,1,Vimcar,2022-07-08,30,2025-06-29,6
+CUST-0003,SMB,DE,Außendienst & Vertrieb,7,129.52,1554.24,GPS Tracking|Digital Logbook,2,Vimcar,2022-10-17,26,2025-10-27,10
+CUST-0004,SMB,DE,Außendienst & Vertrieb,12,256.5,3078.0,GPS Tracking|Digital Logbook,2,Vimcar,2022-10-17,26,2025-10-27,10
+CUST-0005,Mid-Market,CH,Logistik & Transport,37,771.24,9254.88,GPS Tracking|Digital Logbook|Fleet Analytics,3,Vimcar,2022-03-14,34,2025-03-01,2
+CUST-0006,Mid-Market,CH,Logistik & Transport,43,712.49,8549.88,GPS Tracking|Digital Logbook|Fleet Analytics,3,New Logo,2024-06-14,6,2025-06-29,6
+CUST-0007,Enterprise,DE,Logistik & Transport,96,1698.98,20387.76,GPS Tracking|Digital Logbook|Fleet Analytics|Driver Scoring,4,New Logo,2023-08-21,16,2025-08-28,8
+CUST-0008,SMB,DE,Logistik & Transport,6,136.41,1636.92,GPS Tracking|Digital Logbook,2,New Logo,2024-04-11,8,2025-04-30,4
+CUST-0009,SMB,DE,Kommunaler Betrieb,16,399.91,4798.92,GPS Tracking|Digital Logbook,2,Vimcar,2022-11-07,26,2025-10-27,10
+CUST-0010,SMB,CH,Logistik & Transport,5,128.89,1546.68,GPS Tracking|Digital Logbook,2,New Logo,2024-01-01,12,2025-12-26,12
+CUST-0011,SMB,CH,Baugewerbe,20,365.14,4381.68,GPS Tracking|Digital Logbook,2,New Logo,2023-03-04,22,2025-03-01,2
+CUST-0012,SMB,CH,Facility Management,14,383.81,4605.72,GPS Tracking|Digital Logbook,2,Vimcar,2023-10-22,14,2025-10-27,10
+CUST-0013,SMB,DE,Kommunaler Betrieb,5,124.86,1498.32,GPS Tracking|Digital Logbook,2,New Logo,2023-03-25,21,2025-03-31,3
+CUST-0014,SMB,DE,Außendienst & Vertrieb,5,129.81,1557.72,GPS Tracking|Digital Logbook,2,New Logo,2024-09-08,3,2025-09-27,9
+CUST-0015,Mid-Market,AT,Handwerk & Baugewerbe,63,1108.42,13301.04,GPS Tracking|Digital Logbook|Fleet Analytics,3,Avrios,2021-12-31,36,2025-12-26,12
+CUST-0016,SMB,AT,Facility Management,15,393.35,4720.2,GPS Tracking|Digital Logbook,2,New Logo,2024-04-29,8,2025-04-30,4
+CUST-0017,SMB,DE,Kommunaler Betrieb,16,401.17,4814.04,GPS Tracking|Digital Logbook,2,Vimcar,2022-06-24,30,2025-06-29,6
+CUST-0018,Mid-Market,CH,Baugewerbe,62,1047.22,12566.64,GPS Tracking|Digital Logbook|Fleet Analytics,3,Optimum Automotive,2021-10-26,38,2025-10-27,10
+CUST-0019,Mid-Market,AT,Logistik & Transport,48,997.45,11969.4,GPS Tracking|Digital Logbook|Fleet Analytics,3,Vimcar,2021-07-07,42,2025-06-29,6
+CUST-0020,SMB,DE,Außendienst & Vertrieb,4,83.16,997.92,GPS Tracking,1,Vimcar,2022-05-23,31,2025-05-30,5
+CUST-0021,Mid-Market,AT,Außendienst & Vertrieb,57,1098.52,13182.24,GPS Tracking|Digital Logbook|Fleet Analytics,3,Vimcar,2022-09-17,27,2025-09-27,9
+CUST-0022,Mid-Market,DE,Facility Management,75,1295.63,15547.56,GPS Tracking|Digital Logbook|Fleet Analytics,3,Vimcar,2022-02-07,35,2025-01-30,1
+CUST-0023,SMB,AT,Logistik & Transport,12,249.56,2994.72,GPS Tracking|Digital Logbook,2,New Logo,2023-05-16,19,2025-05-30,5
+CUST-0024,SMB,CH,Facility Management,4,81.65,979.8,GPS Tracking,1,Avrios,2022-08-22,28,2025-08-28,8
+CUST-0025,Enterprise,DE,Facility Management,324,5143.64,61723.68,GPS Tracking|Digital Logbook|Fleet Analytics,3,Avrios,2022-01-01,36,2025-12-26,12
+CUST-0026,SMB,DE,Kommunaler Betrieb,9,198.4,2380.8,GPS Tracking|Digital Logbook,2,New Logo,2023-07-22,17,2025-07-29,7
+CUST-0027,SMB,DE,Gesundheitswesen,13,295.52,3546.24,GPS Tracking|Digital Logbook,2,Avrios,2022-12-28,24,2025-12-26,12
+CUST-0028,SMB,DE,Facility Management,19,404.85,4858.2,GPS Tracking|Digital Logbook,2,Vimcar,2022-05-17,31,2025-05-30,5
+CUST-0029,Mid-Market,DE,Gesundheitswesen,35,554.56,6654.72,GPS Tracking|Digital Logbook|Fleet Analytics,3,New Logo,2023-10-04,15,2025-09-27,9
+CUST-0030,Mid-Market,DE,Gesundheitswesen,55,1191.09,14293.08,GPS Tracking|Digital Logbook|Fleet Analytics,3,Avrios,2023-10-19,14,2025-10-27,10
+CUST-0031,Mid-Market,AT,Facility Management,51,863.71,10364.52,GPS Tracking|Digital Logbook|Fleet Analytics,3,New Logo,2021-07-13,42,2025-06-29,6
+CUST-0032,Mid-Market,DE,Logistik & Transport,27,562.37,6748.44,GPS Tracking|Digital Logbook|Fleet Analytics,3,Optimum Automotive,2023-03-06,22,2025-03-01,2
+CUST-0033,SMB,DE,Handwerk & Baugewerbe,11,199.56,2394.72,GPS Tracking|Digital Logbook,2,New Logo,2024-03-17,9,2025-03-31,3
+CUST-0034,Enterprise,DE,Handwerk & Baugewerbe,364,5006.03,60072.36,GPS Tracking|Digital Logbook|Fleet Analytics|Driver Scoring,4,New Logo,2024-01-18,11,2025-01-30,1
+CUST-0035,SMB,DE,Facility Management,2,47.48,569.76,GPS Tracking,1,Avrios,2022-04-15,33,2025-03-31,3
+CUST-0036,Mid-Market,CH,Baugewerbe,32,696.27,8355.24,GPS Tracking|Digital Logbook|Fleet Analytics,3,New Logo,2023-06-03,19,2025-05-30,5
+CUST-0037,Mid-Market,AT,Handwerk & Baugewerbe,28,581.13,6973.56,GPS Tracking|Digital Logbook|Fleet Analytics,3,Avrios,2022-08-04,29,2025-07-29,7
+CUST-0038,Mid-Market,DE,Handwerk & Baugewerbe,30,481.33,5775.96,GPS Tracking|Digital Logbook|Fleet Analytics,3,New Logo,2021-09-06,40,2025-08-28,8
+CUST-0039,Enterprise,DE,Kommunaler Betrieb,208,2643.83,31725.96,GPS Tracking|Digital Logbook|Fleet Analytics|Driver Scoring,4,Avrios,2020-06-20,55,2025-05-30,5
+CUST-0040,Mid-Market,DE,Außendienst & Vertrieb,35,715.04,8580.48,GPS Tracking|Digital Logbook|Fleet Analytics,3,Avrios,2022-09-14,27,2025-09-27,9
+CUST-0041,Mid-Market,DE,Kommunaler Betrieb,40,840.85,10090.2,GPS Tracking|Digital Logbook|Fleet Analytics,3,Vimcar,2022-06-07,31,2025-05-30,5
+CUST-0042,SMB,AT,Logistik & Transport,3,72.29,867.48,GPS Tracking,1,New Logo,2024-05-12,7,2025-05-30,5
+CUST-0043,SMB,DE,Logistik & Transport,8,165.17,1982.04,GPS Tracking|Digital Logbook,2,Avrios,2024-06-18,6,2025-06-29,6
+CUST-0044,SMB,DE,Gesundheitswesen,19,356.26,4275.12,GPS Tracking|Digital Logbook,2,New Logo,2024-11-26,1,2025-11-26,11
+CUST-0045,SMB,AT,Facility Management,17,355.51,4266.12,GPS Tracking|Digital Logbook,2,New Logo,2023-08-15,16,2025-08-28,8
+CUST-0046,SMB,DE,Gesundheitswesen,16,299.39,3592.68,GPS Tracking|Digital Logbook,2,New Logo,2023-08-11,16,2025-08-28,8
+CUST-0047,SMB,DE,Kommunaler Betrieb,20,492.24,5906.88,GPS Tracking|Digital Logbook,2,New Logo,2023-10-23,14,2025-10-27,10
+CUST-0048,SMB,DE,Handwerk & Baugewerbe,9,220.29,2643.48,GPS Tracking|Digital Logbook,2,New Logo,2023-06-06,19,2025-05-30,5
+CUST-0049,Mid-Market,DE,Kommunaler Betrieb,24,387.88,4654.56,GPS Tracking|Digital Logbook|Fleet Analytics,3,New Logo,2023-02-11,22,2025-03-01,2
+CUST-0050,SMB,CH,Baugewerbe,11,246.31,2955.72,GPS Tracking|Digital Logbook,2,Optimum Automotive,2022-04-17,32,2025-04-30,4
+CUST-0051,SMB,CH,Logistik & Transport,10,230.05,2760.6,GPS Tracking|Digital Logbook,2,Avrios,2022-02-24,34,2025-03-01,2
+CUST-0052,SMB,DE,Logistik & Transport,15,380.18,4562.16,GPS Tracking|Digital Logbook,2,Vimcar,2023-07-08,18,2025-06-29,6
+CUST-0053,SMB,AT,Facility Management,20,477.42,5729.04,GPS Tracking|Digital Logbook,2,New Logo,2024-10-20,2,2025-10-27,10
+CUST-0054,Enterprise,DE,Außendienst & Vertrieb,376,4602.76,55233.12,GPS Tracking|Digital Logbook|Fleet Analytics|Driver Scoring,4,Vimcar,2020-07-07,54,2025-06-29,6
+CUST-0055,Mid-Market,DE,Außendienst & Vertrieb,79,1338.82,16065.84,GPS Tracking|Digital Logbook|Fleet Analytics,3,Avrios,2021-07-22,41,2025-07-29,7
+CUST-0056,Mid-Market,DE,Gesundheitswesen,26,475.54,5706.48,GPS Tracking|Digital Logbook|Fleet Analytics,3,Vimcar,2022-07-19,29,2025-07-29,7
+CUST-0057,SMB,DE,Außendienst & Vertrieb,5,132.89,1594.68,GPS Tracking|Digital Logbook,2,New Logo,2023-01-26,23,2025-01-30,1
+CUST-0058,Mid-Market,CH,Logistik & Transport,39,765.89,9190.68,GPS Tracking|Digital Logbook|Fleet Analytics,3,Optimum Automotive,2022-08-04,29,2025-07-29,7
+CUST-0059,SMB,AT,Außendienst & Vertrieb,16,302.09,3625.08,GPS Tracking|Digital Logbook,2,New Logo,2023-07-04,18,2025-06-29,6
+CUST-0060,SMB,CH,Baugewerbe,18,472.49,5669.88,GPS Tracking|Digital Logbook,2,New Logo,2024-11-29,1,2025-11-26,11
+CUST-0061,Enterprise,CH,Baugewerbe,292,3598.97,43187.64,GPS Tracking|Digital Logbook|Fleet Analytics|Driver Scoring,4,Avrios,2021-11-06,38,2025-10-27,10
+CUST-0062,Mid-Market,DE,Facility Management,69,1059.93,12719.16,GPS Tracking|Digital Logbook|Fleet Analytics,3,New Logo,2023-05-05,20,2025-04-30,4
+CUST-0063,Mid-Market,DE,Gesundheitswesen,49,1037.13,12445.56,GPS Tracking|Digital Logbook|Fleet Analytics,3,Vimcar,2022-02-13,35,2025-01-30,1
+CUST-0064,Mid-Market,DE,Handwerk & Baugewerbe,59,1215.12,14581.44,GPS Tracking|Digital Logbook|Fleet Analytics,3,New Logo,2023-12-13,12,2025-12-26,12
+CUST-0065,Mid-Market,AT,Handwerk & Baugewerbe,56,999.93,11999.16,GPS Tracking|Digital Logbook|Fleet Analytics,3,New Logo,2023-07-30,17,2025-07-29,7
+CUST-0066,Mid-Market,CH,Baugewerbe,50,1081.47,12977.64,GPS Tracking|Digital Logbook|Fleet Analytics,3,Optimum Automotive,2021-03-16,46,2025-03-01,2
+CUST-0067,SMB,DE,Außendienst & Vertrieb,11,253.98,3047.76,GPS Tracking|Digital Logbook,2,New Logo,2023-05-22,19,2025-05-30,5
+CUST-0068,SMB,DE,Kommunaler Betrieb,17,347.43,4169.16,GPS Tracking|Digital Logbook,2,New Logo,2024-02-09,10,2025-03-01,2
+CUST-0069,SMB,DE,Facility Management,18,458.33,5499.96,GPS Tracking|Digital Logbook,2,New Logo,2024-02-26,10,2025-03-01,2
+CUST-0070,SMB,CH,Logistik & Transport,15,320.98,3851.76,GPS Tracking|Digital Logbook,2,Vimcar,2022-01-27,35,2025-01-30,1
+CUST-0071,SMB,CH,Baugewerbe,11,277.87,3334.44,GPS Tracking|Digital Logbook,2,Optimum Automotive,2022-03-05,34,2025-03-01,2
+CUST-0072,Enterprise,CH,Baugewerbe,356,5306.55,63678.6,GPS Tracking|Digital Logbook|Fleet Analytics|Driver Scoring,4,Avrios,2022-11-22,25,2025-11-26,11
+CUST-0073,Enterprise,AT,Außendienst & Vertrieb,245,4218.31,50619.72,GPS Tracking|Digital Logbook|Fleet Analytics,3,Vimcar,2020-11-04,50,2025-10-27,10
+CUST-0074,SMB,CH,Baugewerbe,3,63.55,762.6,GPS Tracking,1,Optimum Automotive,2022-04-08,33,2025-03-31,3
+CUST-0075,Mid-Market,DE,Außendienst & Vertrieb,45,986.35,11836.2,GPS Tracking|Digital Logbook|Fleet Analytics,3,New Logo,2021-03-07,46,2025-03-01,2
+CUST-0076,SMB,AT,Außendienst & Vertrieb,3,57.79,693.48,GPS Tracking,1,New Logo,2023-01-22,23,2025-01-30,1
+CUST-0077,Enterprise,DE,Gesundheitswesen,132,2000.55,24006.6,GPS Tracking|Digital Logbook|Fleet Analytics,3,Vimcar,2022-03-12,34,2025-03-01,2
+CUST-0078,SMB,CH,Baugewerbe,6,112.49,1349.88,GPS Tracking|Digital Logbook,2,New Logo,2023-06-08,19,2025-05-30,5
+CUST-0079,SMB,AT,Außendienst & Vertrieb,4,106.07,1272.84,GPS Tracking,1,New Logo,2022-10-15,26,2025-10-27,10
+CUST-0080,SMB,CH,Außendienst & Vertrieb,19,348.82,4185.84,GPS Tracking|Digital Logbook,2,Optimum Automotive,2024-07-14,5,2025-07-29,7
+CUST-0081,Mid-Market,AT,Handwerk & Baugewerbe,35,707.96,8495.52,GPS Tracking|Digital Logbook|Fleet Analytics,3,New Logo,2022-05-28,31,2025-05-30,5
+CUST-0082,SMB,DE,Handwerk & Baugewerbe,16,314.62,3775.44,GPS Tracking|Digital Logbook,2,New Logo,2023-03-29,21,2025-03-31,3
+CUST-0083,Mid-Market,AT,Außendienst & Vertrieb,41,843.49,10121.88,GPS Tracking|Digital Logbook|Fleet Analytics,3,New Logo,2023-03-12,22,2025-03-01,2
+CUST-0084,Enterprise,DE,Logistik & Transport,155,2087.1,25045.2,GPS Tracking|Digital Logbook|Fleet Analytics|Driver Scoring,4,Avrios,2022-06-12,31,2025-05-30,5
+CUST-0085,SMB,CH,Facility Management,7,131.53,1578.36,GPS Tracking|Digital Logbook,2,Avrios,2022-10-10,27,2025-09-27,9
+CUST-0086,SMB,CH,Außendienst & Vertrieb,17,461.18,5534.16,GPS Tracking|Digital Logbook,2,Optimum Automotive,2024-02-12,10,2025-03-01,2
+CUST-0087,Enterprise,DE,Facility Management,316,4276.1,51313.2,GPS Tracking|Digital Logbook|Fleet Analytics|Driver Scoring,4,New Logo,2024-09-13,3,2025-09-27,9
+CUST-0088,SMB,AT,Facility Management,19,372.02,4464.24,GPS Tracking|Digital Logbook,2,New Logo,2022-06-11,31,2025-05-30,5
+CUST-0089,SMB,DE,Logistik & Transport,15,373.55,4482.6,GPS Tracking|Digital Logbook,2,Optimum Automotive,2022-05-11,32,2025-04-30,4
+CUST-0090,SMB,DE,Kommunaler Betrieb,14,371.47,4457.64,GPS Tracking|Digital Logbook,2,Optimum Automotive,2024-04-27,8,2025-04-30,4
+CUST-0091,SMB,AT,Außendienst & Vertrieb,13,308.73,3704.76,GPS Tracking|Digital Logbook,2,Vimcar,2023-04-07,21,2025-03-31,3
+CUST-0092,Mid-Market,DE,Gesundheitswesen,38,572.15,6865.8,GPS Tracking|Digital Logbook|Fleet Analytics,3,New Logo,2024-07-24,5,2025-07-29,7
+CUST-0093,Mid-Market,DE,Logistik & Transport,52,1083.15,12997.8,GPS Tracking|Digital Logbook|Fleet Analytics,3,New Logo,2023-03-26,21,2025-03-31,3
+CUST-0094,SMB,DE,Gesundheitswesen,13,262.47,3149.64,GPS Tracking|Digital Logbook,2,New Logo,2023-11-08,13,2025-11-26,11
+CUST-0095,SMB,DE,Außendienst & Vertrieb,6,145.69,1748.28,GPS Tracking|Digital Logbook,2,New Logo,2024-09-12,3,2025-09-27,9
+CUST-0096,SMB,CH,Außendienst & Vertrieb,3,71.39,856.68,GPS Tracking,1,Vimcar,2024-03-07,9,2025-03-31,3
+CUST-0097,Enterprise,CH,Außendienst & Vertrieb,248,4088.25,49059.0,GPS Tracking|Digital Logbook|Fleet Analytics|Driver Scoring,4,Optimum Automotive,2023-10-09,14,2025-10-27,10
+CUST-0098,SMB,DE,Facility Management,18,414.32,4971.84,GPS Tracking|Digital Logbook,2,New Logo,2023-05-23,19,2025-05-30,5
+CUST-0099,Enterprise,DE,Handwerk & Baugewerbe,327,5822.01,69864.12,GPS Tracking|Digital Logbook|Fleet Analytics,3,New Logo,2023-02-06,23,2025-01-30,1
+CUST-0100,Enterprise,DE,Gesundheitswesen,320,5688.76,68265.12,GPS Tracking|Digital Logbook|Fleet Analytics,3,New Logo,2023-12-19,12,2025-12-26,12
+CUST-0101,SMB,CH,Baugewerbe,14,387.42,4649.04,GPS Tracking|Digital Logbook,2,Vimcar,2022-11-13,25,2025-11-26,11
+CUST-0102,Mid-Market,DE,Gesundheitswesen,21,353.88,4246.56,GPS Tracking|Digital Logbook|Fleet Analytics,3,New Logo,2024-02-22,10,2025-03-01,2
+CUST-0103,Mid-Market,CH,Außendienst & Vertrieb,68,1340.03,16080.36,GPS Tracking|Digital Logbook|Fleet Analytics,3,Avrios,2021-07-23,41,2025-07-29,7
+CUST-0104,SMB,DE,Kommunaler Betrieb,5,123.74,1484.88,GPS Tracking|Digital Logbook,2,Vimcar,2022-04-11,33,2025-03-31,3
+CUST-0105,SMB,CH,Baugewerbe,12,325.83,3909.96,GPS Tracking|Digital Logbook,2,New Logo,2023-09-05,16,2025-08-28,8
+CUST-0106,Mid-Market,DE,Logistik & Transport,79,1572.7,18872.4,GPS Tracking|Digital Logbook|Fleet Analytics,3,Avrios,2021-03-13,46,2025-03-01,2
+CUST-0107,SMB,CH,Logistik & Transport,3,82.39,988.68,GPS Tracking,1,New Logo,2023-03-19,21,2025-03-31,3
+CUST-0108,SMB,DE,Facility Management,5,101.74,1220.88,GPS Tracking|Digital Logbook,2,New Logo,2024-02-28,10,2025-03-01,2
+CUST-0109,SMB,DE,Gesundheitswesen,19,421.63,5059.56,GPS Tracking|Digital Logbook,2,New Logo,2024-01-20,11,2025-01-30,1
+CUST-0110,Enterprise,DE,Handwerk & Baugewerbe,131,2227.28,26727.36,GPS Tracking|Digital Logbook|Fleet Analytics|Driver Scoring,4,Avrios,2021-04-21,45,2025-03-31,3
+CUST-0111,Enterprise,AT,Handwerk & Baugewerbe,270,3591.98,43103.76,GPS Tracking|Digital Logbook|Fleet Analytics|Driver Scoring,4,New Logo,2022-04-06,33,2025-03-31,3
+CUST-0112,SMB,DE,Facility Management,13,304.78,3657.36,GPS Tracking|Digital Logbook,2,Vimcar,2022-11-28,25,2025-11-26,11
+CUST-0113,SMB,DE,Logistik & Transport,8,221.46,2657.52,GPS Tracking|Digital Logbook,2,Vimcar,2022-05-15,32,2025-04-30,4
+CUST-0114,SMB,DE,Logistik & Transport,2,37.01,444.12,GPS Tracking,1,Optimum Automotive,2023-01-18,23,2025-01-30,1
+CUST-0115,Enterprise,DE,Logistik & Transport,370,4895.56,58746.72,GPS Tracking|Digital Logbook|Fleet Analytics,3,Optimum Automotive,2020-02-07,59,2025-01-30,1
+CUST-0116,Enterprise,DE,Facility Management,200,2794.27,33531.24,GPS Tracking|Digital Logbook|Fleet Analytics|Driver Scoring,4,New Logo,2023-12-05,13,2025-11-26,11
+CUST-0117,SMB,DE,Handwerk & Baugewerbe,6,167.25,2007.0,GPS Tracking|Digital Logbook,2,New Logo,2023-07-07,18,2025-06-29,6
+CUST-0118,Mid-Market,AT,Logistik & Transport,63,1327.1,15925.2,GPS Tracking|Digital Logbook|Fleet Analytics,3,Vimcar,2024-02-06,10,2025-03-01,2
+CUST-0119,Mid-Market,DE,Logistik & Transport,58,1001.45,12017.4,GPS Tracking|Digital Logbook|Fleet Analytics,3,New Logo,2023-11-11,13,2025-11-26,11
+CUST-0120,SMB,CH,Außendienst & Vertrieb,15,348.91,4186.92,GPS Tracking|Digital Logbook,2,New Logo,2024-07-24,5,2025-07-29,7
+CUST-0121,Mid-Market,DE,Kommunaler Betrieb,53,1015.25,12183.0,GPS Tracking|Digital Logbook|Fleet Analytics,3,Avrios,2022-04-21,32,2025-04-30,4
+CUST-0122,SMB,AT,Handwerk & Baugewerbe,3,75.82,909.84,GPS Tracking,1,New Logo,2023-03-25,21,2025-03-31,3
+CUST-0123,Mid-Market,AT,Handwerk & Baugewerbe,24,527.76,6333.12,GPS Tracking|Digital Logbook|Fleet Analytics,3,Avrios,2022-08-02,29,2025-07-29,7
+CUST-0124,SMB,AT,Handwerk & Baugewerbe,17,427.11,5125.32,GPS Tracking|Digital Logbook,2,Vimcar,2022-06-07,31,2025-05-30,5
+CUST-0125,SMB,DE,Kommunaler Betrieb,12,289.0,3468.0,GPS Tracking|Digital Logbook,2,Avrios,2024-07-20,5,2025-07-29,7
+CUST-0126,SMB,DE,Kommunaler Betrieb,20,469.67,5636.04,GPS Tracking|Digital Logbook,2,New Logo,2023-02-05,23,2025-01-30,1
+CUST-0127,SMB,AT,Handwerk & Baugewerbe,18,377.08,4524.96,GPS Tracking|Digital Logbook,2,Avrios,2022-01-31,35,2025-01-30,1
+CUST-0128,Enterprise,DE,Logistik & Transport,139,2379.23,28550.76,GPS Tracking|Digital Logbook|Fleet Analytics|Driver Scoring,4,Optimum Automotive,2021-02-07,47,2025-01-30,1
+CUST-0129,Enterprise,DE,Außendienst & Vertrieb,301,4427.51,53130.12,GPS Tracking|Digital Logbook|Fleet Analytics|Driver Scoring,4,New Logo,2023-06-23,18,2025-06-29,6
+CUST-0130,Mid-Market,AT,Facility Management,47,945.04,11340.48,GPS Tracking|Digital Logbook|Fleet Analytics,3,New Logo,2023-01-31,23,2025-01-30,1
+CUST-0131,SMB,AT,Handwerk & Baugewerbe,13,357.97,4295.64,GPS Tracking|Digital Logbook,2,Vimcar,2022-04-05,33,2025-03-31,3
+CUST-0132,SMB,DE,Kommunaler Betrieb,4,89.28,1071.36,GPS Tracking,1,Optimum Automotive,2022-10-30,26,2025-10-27,10
+CUST-0133,Enterprise,DE,Außendienst & Vertrieb,111,1722.59,20671.08,GPS Tracking|Digital Logbook|Fleet Analytics|Driver Scoring,4,Avrios,2021-08-09,41,2025-07-29,7
+CUST-0134,Enterprise,DE,Handwerk & Baugewerbe,262,4517.31,54207.72,GPS Tracking|Digital Logbook|Fleet Analytics|Driver Scoring,4,Avrios,2020-07-19,54,2025-06-29,6
+CUST-0135,SMB,DE,Kommunaler Betrieb,11,264.05,3168.6,GPS Tracking|Digital Logbook,2,Vimcar,2022-12-12,25,2025-11-26,11
+CUST-0136,SMB,DE,Handwerk & Baugewerbe,8,156.38,1876.56,GPS Tracking|Digital Logbook,2,Vimcar,2022-03-20,33,2025-03-31,3
+CUST-0137,SMB,DE,Facility Management,13,343.9,4126.8,GPS Tracking|Digital Logbook,2,Vimcar,2022-11-10,26,2025-10-27,10
+CUST-0138,Mid-Market,DE,Kommunaler Betrieb,57,945.24,11342.88,GPS Tracking|Digital Logbook|Fleet Analytics,3,Optimum Automotive,2022-06-07,31,2025-05-30,5
+CUST-0139,Mid-Market,CH,Außendienst & Vertrieb,60,1183.49,14201.88,GPS Tracking|Digital Logbook|Fleet Analytics,3,Vimcar,2021-09-18,40,2025-08-28,8
+CUST-0140,SMB,AT,Facility Management,2,39.61,475.32,GPS Tracking,1,New Logo,2023-03-10,22,2025-03-01,2
+CUST-0141,SMB,CH,Baugewerbe,2,39.63,475.56,GPS Tracking,1,New Logo,2024-02-12,10,2025-03-01,2
+CUST-0142,SMB,DE,Kommunaler Betrieb,4,77.67,932.04,GPS Tracking,1,Vimcar,2024-09-30,3,2025-09-27,9
+CUST-0143,SMB,DE,Facility Management,8,174.1,2089.2,GPS Tracking|Digital Logbook,2,Vimcar,2022-05-17,31,2025-05-30,5
+CUST-0144,Enterprise,DE,Handwerk & Baugewerbe,240,3919.1,47029.2,GPS Tracking|Digital Logbook|Fleet Analytics|Driver Scoring,4,New Logo,2020-05-26,56,2025-04-30,4
+CUST-0145,SMB,DE,Facility Management,6,117.44,1409.28,GPS Tracking|Digital Logbook,2,New Logo,2024-08-22,4,2025-08-28,8
+CUST-0146,SMB,DE,Außendienst & Vertrieb,16,393.91,4726.92,GPS Tracking|Digital Logbook,2,Avrios,2022-03-13,34,2025-03-01,2
+CUST-0147,SMB,DE,Außendienst & Vertrieb,10,201.56,2418.72,GPS Tracking|Digital Logbook,2,Vimcar,2022-01-17,35,2025-01-30,1
+CUST-0148,Mid-Market,DE,Kommunaler Betrieb,28,475.52,5706.24,GPS Tracking|Digital Logbook|Fleet Analytics,3,Avrios,2021-01-12,48,2025-12-26,12
+CUST-0149,SMB,AT,Handwerk & Baugewerbe,11,203.0,2436.0,GPS Tracking|Digital Logbook,2,New Logo,2022-09-14,27,2025-09-27,9
+CUST-0150,SMB,DE,Facility Management,2,40.09,481.08,GPS Tracking,1,New Logo,2023-09-26,15,2025-09-27,9
+CUST-0151,Enterprise,DE,Logistik & Transport,229,3198.84,38386.08,GPS Tracking|Digital Logbook|Fleet Analytics|Driver Scoring,4,New Logo,2024-09-17,3,2025-09-27,9
+CUST-0152,Mid-Market,DE,Gesundheitswesen,45,842.76,10113.12,GPS Tracking|Digital Logbook|Fleet Analytics,3,New Logo,2023-07-19,17,2025-07-29,7
+CUST-0153,SMB,DE,Außendienst & Vertrieb,13,243.37,2920.44,GPS Tracking|Digital Logbook,2,New Logo,2024-09-06,3,2025-09-27,9
+CUST-0154,SMB,CH,Baugewerbe,4,106.48,1277.76,GPS Tracking,1,Avrios,2022-07-06,30,2025-06-29,6
+CUST-0155,SMB,AT,Logistik & Transport,11,210.67,2528.04,GPS Tracking|Digital Logbook,2,New Logo,2024-10-20,2,2025-10-27,10
+CUST-0156,SMB,DE,Handwerk & Baugewerbe,16,421.12,5053.44,GPS Tracking|Digital Logbook,2,Vimcar,2022-11-21,25,2025-11-26,11
+CUST-0157,SMB,DE,Außendienst & Vertrieb,9,201.21,2414.52,GPS Tracking|Digital Logbook,2,Avrios,2022-09-03,28,2025-08-28,8
+CUST-0158,Mid-Market,DE,Logistik & Transport,76,1305.07,15660.84,GPS Tracking|Digital Logbook|Fleet Analytics,3,Vimcar,2022-12-07,25,2025-11-26,11
+CUST-0159,SMB,DE,Logistik & Transport,4,92.42,1109.04,GPS Tracking,1,New Logo,2024-04-12,8,2025-04-30,4
+CUST-0160,SMB,DE,Logistik & Transport,13,279.64,3355.68,GPS Tracking|Digital Logbook,2,Optimum Automotive,2024-02-03,11,2025-01-30,1
+CUST-0161,SMB,AT,Handwerk & Baugewerbe,10,199.73,2396.76,GPS Tracking|Digital Logbook,2,New Logo,2024-01-23,11,2025-01-30,1
+CUST-0162,Mid-Market,AT,Außendienst & Vertrieb,32,693.09,8317.08,GPS Tracking|Digital Logbook|Fleet Analytics,3,Avrios,2021-04-25,44,2025-04-30,4
+CUST-0163,SMB,AT,Facility Management,20,488.6,5863.2,GPS Tracking|Digital Logbook,2,New Logo,2023-02-09,23,2025-01-30,1
+CUST-0164,Enterprise,DE,Facility Management,158,2312.9,27754.8,GPS Tracking|Digital Logbook|Fleet Analytics,3,Avrios,2022-02-15,35,2025-01-30,1
+CUST-0165,Enterprise,DE,Handwerk & Baugewerbe,383,4725.08,56700.96,GPS Tracking|Digital Logbook|Fleet Analytics|Driver Scoring,4,Vimcar,2021-11-28,37,2025-11-26,11
+CUST-0166,SMB,DE,Handwerk & Baugewerbe,3,65.06,780.72,GPS Tracking,1,Vimcar,2023-04-24,20,2025-04-30,4
+CUST-0167,SMB,DE,Kommunaler Betrieb,18,393.21,4718.52,GPS Tracking|Digital Logbook,2,New Logo,2024-09-08,3,2025-09-27,9
+CUST-0168,Mid-Market,DE,Logistik & Transport,62,1011.7,12140.4,GPS Tracking|Digital Logbook|Fleet Analytics,3,Avrios,2021-06-11,43,2025-05-30,5
+CUST-0169,SMB,AT,Handwerk & Baugewerbe,3,67.52,810.24,GPS Tracking,1,New Logo,2022-12-29,24,2025-12-26,12
+CUST-0170,SMB,DE,Außendienst & Vertrieb,18,440.3,5283.6,GPS Tracking|Digital Logbook,2,Optimum Automotive,2024-09-12,3,2025-09-27,9
+CUST-0171,Enterprise,DE,Facility Management,305,4619.05,55428.6,GPS Tracking|Digital Logbook|Fleet Analytics,3,Vimcar,2021-05-03,44,2025-04-30,4
+CUST-0172,Mid-Market,DE,Handwerk & Baugewerbe,45,803.76,9645.12,GPS Tracking|Digital Logbook|Fleet Analytics,3,Optimum Automotive,2022-12-10,25,2025-11-26,11
+CUST-0173,SMB,DE,Außendienst & Vertrieb,12,223.91,2686.92,GPS Tracking|Digital Logbook,2,New Logo,2024-05-22,7,2025-05-30,5
+CUST-0174,Mid-Market,AT,Logistik & Transport,39,653.79,7845.48,GPS Tracking|Digital Logbook|Fleet Analytics,3,New Logo,2021-02-26,46,2025-03-01,2
+CUST-0175,Mid-Market,DE,Facility Management,42,653.96,7847.52,GPS Tracking|Digital Logbook|Fleet Analytics,3,Vimcar,2021-02-11,47,2025-01-30,1
+CUST-0176,SMB,DE,Gesundheitswesen,11,304.45,3653.4,GPS Tracking|Digital Logbook,2,Vimcar,2022-09-21,27,2025-09-27,9
+CUST-0177,SMB,AT,Facility Management,4,84.38,1012.56,GPS Tracking,1,Avrios,2022-10-22,26,2025-10-27,10
+CUST-0178,SMB,DE,Außendienst & Vertrieb,6,148.21,1778.52,GPS Tracking|Digital Logbook,2,New Logo,2024-05-24,7,2025-05-30,5
+CUST-0179,SMB,AT,Logistik & Transport,18,389.13,4669.56,GPS Tracking|Digital Logbook,2,Vimcar,2022-11-20,25,2025-11-26,11
+CUST-0180,SMB,AT,Logistik & Transport,12,329.72,3956.64,GPS Tracking|Digital Logbook,2,Vimcar,2022-03-12,34,2025-03-01,2
+CUST-0181,Mid-Market,DE,Kommunaler Betrieb,30,466.2,5594.4,GPS Tracking|Digital Logbook|Fleet Analytics,3,New Logo,2024-04-08,8,2025-04-30,4
+CUST-0182,Mid-Market,DE,Facility Management,74,1492.62,17911.44,GPS Tracking|Digital Logbook|Fleet Analytics,3,Vimcar,2021-11-19,37,2025-11-26,11
+CUST-0183,Enterprise,DE,Gesundheitswesen,397,5076.16,60913.92,GPS Tracking|Digital Logbook|Fleet Analytics,3,Vimcar,2022-08-23,28,2025-08-28,8
+CUST-0184,SMB,CH,Facility Management,7,176.48,2117.76,GPS Tracking|Digital Logbook,2,New Logo,2024-09-03,3,2025-09-27,9
+CUST-0185,SMB,DE,Logistik & Transport,16,385.7,4628.4,GPS Tracking|Digital Logbook,2,Vimcar,2022-05-27,31,2025-05-30,5
+CUST-0186,SMB,DE,Logistik & Transport,11,304.22,3650.64,GPS Tracking|Digital Logbook,2,New Logo,2022-04-16,33,2025-03-31,3
+CUST-0187,Enterprise,DE,Facility Management,269,4322.79,51873.48,GPS Tracking|Digital Logbook|Fleet Analytics|Driver Scoring,4,New Logo,2021-07-22,41,2025-07-29,7
+CUST-0188,SMB,AT,Logistik & Transport,14,322.41,3868.92,GPS Tracking|Digital Logbook,2,New Logo,2022-07-28,29,2025-07-29,7
+CUST-0189,SMB,DE,Facility Management,6,160.38,1924.56,GPS Tracking|Digital Logbook,2,New Logo,2024-08-17,4,2025-08-28,8
+CUST-0190,SMB,AT,Facility Management,19,519.52,6234.24,GPS Tracking|Digital Logbook,2,Optimum Automotive,2022-01-10,36,2025-12-26,12
+CUST-0191,SMB,AT,Logistik & Transport,4,102.52,1230.24,GPS Tracking,1,New Logo,2023-05-23,19,2025-05-30,5
+CUST-0192,SMB,CH,Außendienst & Vertrieb,15,283.76,3405.12,GPS Tracking|Digital Logbook,2,New Logo,2023-09-04,16,2025-08-28,8
+CUST-0193,SMB,DE,Logistik & Transport,2,44.3,531.6,GPS Tracking,1,Avrios,2022-09-12,28,2025-08-28,8
+CUST-0194,Enterprise,CH,Logistik & Transport,278,4994.87,59938.44,GPS Tracking|Digital Logbook|Fleet Analytics,3,Vimcar,2022-08-27,28,2025-08-28,8
+CUST-0195,SMB,CH,Baugewerbe,12,310.97,3731.64,GPS Tracking|Digital Logbook,2,Vimcar,2024-02-24,10,2025-03-01,2
+CUST-0196,Enterprise,DE,Handwerk & Baugewerbe,152,2516.06,30192.72,GPS Tracking|Digital Logbook|Fleet Analytics,3,Avrios,2022-02-15,35,2025-01-30,1
+CUST-0197,Mid-Market,AT,Außendienst & Vertrieb,22,369.41,4432.92,GPS Tracking|Digital Logbook|Fleet Analytics,3,New Logo,2023-12-31,12,2025-12-26,12
+CUST-0198,SMB,DE,Handwerk & Baugewerbe,5,128.81,1545.72,GPS Tracking|Digital Logbook,2,New Logo,2023-08-03,17,2025-07-29,7
+CUST-0199,Enterprise,AT,Außendienst & Vertrieb,203,2947.35,35368.2,GPS Tracking|Digital Logbook|Fleet Analytics,3,Avrios,2020-04-21,57,2025-03-31,3
+CUST-0200,Mid-Market,DE,Logistik & Transport,59,1106.39,13276.68,GPS Tracking|Digital Logbook|Fleet Analytics,3,Avrios,2021-04-17,45,2025-03-31,3
+CUST-0201,Enterprise,CH,Baugewerbe,154,2117.14,25405.68,GPS Tracking|Digital Logbook|Fleet Analytics,3,New Logo,2024-09-29,3,2025-09-27,9
+CUST-0202,Enterprise,AT,Handwerk & Baugewerbe,176,2813.58,33762.96,GPS Tracking|Digital Logbook|Fleet Analytics,3,New Logo,2024-04-10,8,2025-04-30,4
+CUST-0203,Mid-Market,DE,Facility Management,45,950.1,11401.2,GPS Tracking|Digital Logbook|Fleet Analytics,3,New Logo,2024-08-04,4,2025-08-28,8
+CUST-0204,SMB,DE,Facility Management,10,254.73,3056.76,GPS Tracking|Digital Logbook,2,Optimum Automotive,2022-12-01,25,2025-11-26,11
+CUST-0205,SMB,DE,Gesundheitswesen,9,227.96,2735.52,GPS Tracking|Digital Logbook,2,New Logo,2024-05-03,8,2025-04-30,4
+CUST-0206,SMB,DE,Gesundheitswesen,12,232.01,2784.12,GPS Tracking|Digital Logbook,2,Avrios,2022-12-11,25,2025-11-26,11
+CUST-0207,SMB,AT,Außendienst & Vertrieb,7,184.13,2209.56,GPS Tracking|Digital Logbook,2,New Logo,2022-04-25,32,2025-04-30,4
+CUST-0208,SMB,DE,Außendienst & Vertrieb,7,182.8,2193.6,GPS Tracking|Digital Logbook,2,New Logo,2024-07-25,5,2025-07-29,7
+CUST-0209,SMB,DE,Handwerk & Baugewerbe,3,62.8,753.6,GPS Tracking,1,New Logo,2024-09-03,3,2025-09-27,9
+CUST-0210,Enterprise,DE,Außendienst & Vertrieb,242,4259.25,51111.0,GPS Tracking|Digital Logbook|Fleet Analytics|Driver Scoring,4,Avrios,2021-11-12,38,2025-10-27,10
+CUST-0211,SMB,DE,Handwerk & Baugewerbe,10,183.66,2203.92,GPS Tracking|Digital Logbook,2,New Logo,2023-11-06,14,2025-10-27,10
+CUST-0212,Mid-Market,DE,Facility Management,76,1488.85,17866.2,GPS Tracking|Digital Logbook|Fleet Analytics,3,Avrios,2023-04-22,20,2025-04-30,4
+CUST-0213,SMB,DE,Außendienst & Vertrieb,15,403.42,4841.04,GPS Tracking|Digital Logbook,2,Optimum Automotive,2022-06-15,31,2025-05-30,5
+CUST-0214,SMB,DE,Facility Management,12,332.85,3994.2,GPS Tracking|Digital Logbook,2,Optimum Automotive,2022-02-19,34,2025-03-01,2
+CUST-0215,Enterprise,DE,Kommunaler Betrieb,346,4705.71,56468.52,GPS Tracking|Digital Logbook|Fleet Analytics,3,New Logo,2024-04-16,8,2025-04-30,4
+CUST-0216,Enterprise,DE,Facility Management,173,2642.2,31706.4,GPS Tracking|Digital Logbook|Fleet Analytics,3,Vimcar,2022-12-15,24,2025-12-26,12
+CUST-0217,Mid-Market,DE,Außendienst & Vertrieb,40,724.86,8698.32,GPS Tracking|Digital Logbook|Fleet Analytics,3,Vimcar,2022-06-13,31,2025-05-30,5
+CUST-0218,Mid-Market,AT,Außendienst & Vertrieb,43,779.59,9355.08,GPS Tracking|Digital Logbook|Fleet Analytics,3,Avrios,2022-11-10,26,2025-10-27,10
+CUST-0219,SMB,AT,Außendienst & Vertrieb,10,243.95,2927.4,GPS Tracking|Digital Logbook,2,Vimcar,2024-08-06,4,2025-08-28,8
+CUST-0220,SMB,DE,Logistik & Transport,13,300.7,3608.4,GPS Tracking|Digital Logbook,2,New Logo,2024-01-09,11,2025-01-30,1
+CUST-0221,Enterprise,DE,Gesundheitswesen,392,6298.87,75586.44,GPS Tracking|Digital Logbook|Fleet Analytics,3,Vimcar,2022-04-19,32,2025-04-30,4
+CUST-0222,Mid-Market,DE,Logistik & Transport,44,771.54,9258.48,GPS Tracking|Digital Logbook|Fleet Analytics,3,Vimcar,2021-08-28,40,2025-08-28,8
+CUST-0223,SMB,DE,Handwerk & Baugewerbe,16,439.81,5277.72,GPS Tracking|Digital Logbook,2,Avrios,2022-11-01,26,2025-10-27,10
+CUST-0224,Mid-Market,DE,Gesundheitswesen,57,909.94,10919.28,GPS Tracking|Digital Logbook|Fleet Analytics,3,Avrios,2022-10-12,27,2025-09-27,9
+CUST-0225,SMB,DE,Logistik & Transport,10,204.96,2459.52,GPS Tracking|Digital Logbook,2,Vimcar,2024-04-13,8,2025-04-30,4
+CUST-0226,Mid-Market,CH,Außendienst & Vertrieb,52,968.46,11621.52,GPS Tracking|Digital Logbook|Fleet Analytics,3,Vimcar,2021-09-08,40,2025-08-28,8
+CUST-0227,SMB,DE,Außendienst & Vertrieb,16,322.33,3867.96,GPS Tracking|Digital Logbook,2,New Logo,2023-04-27,20,2025-04-30,4
+CUST-0228,Enterprise,AT,Außendienst & Vertrieb,183,2330.66,27967.92,GPS Tracking|Digital Logbook|Fleet Analytics|Driver Scoring,4,New Logo,2024-05-04,8,2025-04-30,4
+CUST-0229,SMB,CH,Logistik & Transport,4,104.42,1253.04,GPS Tracking,1,New Logo,2023-02-16,22,2025-03-01,2
+CUST-0230,Enterprise,AT,Logistik & Transport,362,5521.6,66259.2,GPS Tracking|Digital Logbook|Fleet Analytics|Driver Scoring,4,New Logo,2023-01-27,23,2025-01-30,1
+CUST-0231,SMB,DE,Logistik & Transport,13,300.14,3601.68,GPS Tracking|Digital Logbook,2,New Logo,2024-03-28,9,2025-03-31,3
+CUST-0232,SMB,DE,Kommunaler Betrieb,9,233.13,2797.56,GPS Tracking|Digital Logbook,2,New Logo,2024-10-09,2,2025-10-27,10
+CUST-0233,Mid-Market,DE,Handwerk & Baugewerbe,44,803.96,9647.52,GPS Tracking|Digital Logbook|Fleet Analytics,3,Vimcar,2021-09-29,39,2025-09-27,9
+CUST-0234,Mid-Market,AT,Außendienst & Vertrieb,25,429.13,5149.56,GPS Tracking|Digital Logbook|Fleet Analytics,3,Avrios,2022-02-25,34,2025-03-01,2
+CUST-0235,SMB,CH,Baugewerbe,20,374.75,4497.0,GPS Tracking|Digital Logbook,2,New Logo,2023-02-21,22,2025-03-01,2
+CUST-0236,SMB,CH,Facility Management,16,396.82,4761.84,GPS Tracking|Digital Logbook,2,Vimcar,2022-12-27,24,2025-12-26,12
+CUST-0237,Enterprise,DE,Facility Management,147,2145.57,25746.84,GPS Tracking|Digital Logbook|Fleet Analytics|Driver Scoring,4,New Logo,2024-06-11,6,2025-06-29,6
+CUST-0238,SMB,AT,Facility Management,7,137.34,1648.08,GPS Tracking|Digital Logbook,2,New Logo,2023-08-28,16,2025-08-28,8
+CUST-0239,Mid-Market,DE,Kommunaler Betrieb,75,1166.4,13996.8,GPS Tracking|Digital Logbook|Fleet Analytics,3,New Logo,2023-09-26,15,2025-09-27,9
+CUST-0240,Mid-Market,DE,Handwerk & Baugewerbe,38,603.3,7239.6,GPS Tracking|Digital Logbook|Fleet Analytics,3,New Logo,2023-02-20,22,2025-03-01,2
+CUST-0241,SMB,DE,Kommunaler Betrieb,18,439.38,5272.56,GPS Tracking|Digital Logbook,2,Avrios,2024-01-21,11,2025-01-30,1
+CUST-0242,Mid-Market,DE,Kommunaler Betrieb,67,1428.04,17136.48,GPS Tracking|Digital Logbook|Fleet Analytics,3,Optimum Automotive,2022-12-11,25,2025-11-26,11
+CUST-0243,SMB,DE,Gesundheitswesen,3,78.76,945.12,GPS Tracking,1,Vimcar,2024-10-04,2,2025-10-27,10
+CUST-0244,Enterprise,DE,Gesundheitswesen,376,5109.06,61308.72,GPS Tracking|Digital Logbook|Fleet Analytics|Driver Scoring,4,New Logo,2023-07-29,17,2025-07-29,7
+CUST-0245,SMB,DE,Facility Management,2,45.96,551.52,GPS Tracking,1,New Logo,2023-04-18,20,2025-04-30,4
+CUST-0246,Mid-Market,AT,Handwerk & Baugewerbe,51,852.42,10229.04,GPS Tracking|Digital Logbook|Fleet Analytics,3,Vimcar,2022-07-24,29,2025-07-29,7
+CUST-0247,SMB,DE,Logistik & Transport,3,58.74,704.88,GPS Tracking,1,Avrios,2022-08-03,29,2025-07-29,7
+CUST-0248,SMB,DE,Facility Management,12,288.8,3465.6,GPS Tracking|Digital Logbook,2,New Logo,2023-03-02,22,2025-03-01,2
+CUST-0249,Mid-Market,DE,Logistik & Transport,67,1468.38,17620.56,GPS Tracking|Digital Logbook|Fleet Analytics,3,New Logo,2022-11-25,25,2025-11-26,11
+CUST-0250,SMB,DE,Außendienst & Vertrieb,13,300.95,3611.4,GPS Tracking|Digital Logbook,2,New Logo,2024-04-28,8,2025-04-30,4
