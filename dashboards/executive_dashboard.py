@@ -1,10 +1,5 @@
 """
 executive_dashboard.py
-----------------------
-Generates an executive-ready CX Operations dashboard for fleet SaaS.
-Designed to answer the questions a Head of RevOps asks in a Monday morning
-pipeline review:
-
     1. What is our overall customer health posture?
     2. Where is churn risk concentrated — and what ARR is at stake?
     3. How are retention metrics (NRR/GRR) trending?
@@ -26,7 +21,7 @@ import os
 warnings.filterwarnings("ignore")
 os.makedirs("dashboards", exist_ok=True)
 
-# ── Palette ────────────────────────────────────────────────────────────────────
+# Palette 
 COLORS = {
     "green":       "#2ECC71",
     "amber":       "#F39C12",
@@ -70,7 +65,7 @@ def load_data():
     return scored, nrr_grr, pipeline, seg_sum, country, interv
 
 
-# ── Panel builders ─────────────────────────────────────────────────────────────
+# Panel builders 
 
 def panel_kpi_strip(fig, gs_row, scored, nrr_grr, interv):
     """Top KPI strip: 5 headline metrics."""
@@ -282,7 +277,7 @@ def panel_health_scatter(ax, scored):
             arrowprops={"arrowstyle": "->", "color": COLORS["red"], "lw": 0.8},
         )
 
-    # Risk zone shading
+    # Risk zone 
     ax.axvspan(0, 40, alpha=0.05, color=COLORS["red"])
     ax.axvspan(40, 70, alpha=0.04, color=COLORS["amber"])
 
@@ -355,7 +350,7 @@ def panel_intervention_table(ax, interv):
                  pad=16, loc="left")
 
 
-# ── Assemble dashboard ─────────────────────────────────────────────────────────
+# Assemble dashboard 
 
 def build_dashboard():
     scored, nrr_grr, pipeline, seg_sum, country, interv = load_data()
@@ -370,7 +365,7 @@ def build_dashboard():
         hspace=0.35,
     )
 
-    # ── Header ──────────────────────────────────────────────────────────────
+    # Header
     header_ax = fig.add_subplot(outer_gs[0])
     header_ax.set_facecolor(COLORS["dark_blue"])
     header_ax.axis("off")
@@ -383,10 +378,10 @@ def build_dashboard():
                    va="center", ha="right", fontsize=9.5, color=COLORS["light_blue"],
                    transform=header_ax.transAxes)
 
-    # ── KPI strip ────────────────────────────────────────────────────────────
+    # KPI strip
     panel_kpi_strip(fig, outer_gs[1], scored, nrr_grr, interv)
 
-    # ── Main panels (2 rows × 3 cols) ───────────────────────────────────────
+    # Main panels (2 rows × 3 cols)
     top_gs = gridspec.GridSpecFromSubplotSpec(
         1, 3, subplot_spec=outer_gs[2], wspace=0.32, hspace=0.0
     )
